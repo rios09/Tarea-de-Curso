@@ -61,13 +61,14 @@ public class EmployeeDal {
 		}
 	}
 
-	public Nomina openList() {
+	public List <Nomina> openList() {
+		List<Nomina>NominaList = null;
 		try {
 			File file = new File(filePath);
 			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
-			Nomina n = (Nomina) ois.readObject();
+			NominaList = (List<Nomina>) ois.readObject();
 			ois.close();
-			return n;
+			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -79,7 +80,7 @@ public class EmployeeDal {
 			e.printStackTrace();
 		}
 
-		return null;
+		return NominaList;
 	}
 
 }

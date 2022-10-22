@@ -89,13 +89,14 @@ public class EmployeeForm {
 	}
 
 	public void showEmployees() {
-
+		System.out.println("Mostrando Datos del empleado agregado: \n");
 		for (int i = 0; i < NominaList.size(); i++) {
 			System.out.format("%d | &d | %d | %d | %d | %d | %d | %d | %s\n", i + 1, NominaList.get(i).getFirstName(),
 					NominaList.get(i).getMiddleName(), NominaList.get(i).getSurName(), NominaList.get(i).getLastName(),
 					NominaList.get(i).getGender(), NominaList.get(i).getCountry(), NominaList.get(i).getCity(),
 					NominaList.get(i).getTown(), NominaList.get(i).getSalary());
 		}
+		System.out.println("Caclculos de Nomina del Empleado: \n");
 		calcNomina();
 	}
 
